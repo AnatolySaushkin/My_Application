@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         fab_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent intent = new Intent(MainActivity.this, NotesTakerActivity.class);
+                Intent intent = new Intent(MainActivity.this, NotesTakerActivity.class);
                 startActivityForResult(intent, 101);
             }
         });
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 101) {
-            if (resultCode == Activity.RESULT_OK){
+            if (resultCode == Activity.RESULT_OK) {
                 Notes new_notes = (Notes) data.getSerializableExtra("note");
                 database.mainDao().insert(new_notes);
                 notes.clear();
@@ -60,7 +60,16 @@ public class MainActivity extends AppCompatActivity {
                 notesListAdapter.notifyDataSetChanged();
             }
         }
+        if (requestCode == 102) {
+            if (requestCode == Activity.RESULT_OK) {
+                Notes new_notes = (Notes) data.getSerializableExtra("note");
+                database.mainDao().update(new_notes.getID(), new_notes.getTitle(), new_notes.getNotes());
+                notes.clear();
+                notes.addAll(database.mainDao().getAll());
+                notesListAdapter.notifyDataSetChanged();
 
+            }
+        }
     }
 
     private void updateRecycler(List<Notes> notes) {
@@ -73,7 +82,9 @@ public class MainActivity extends AppCompatActivity {
     private final NotesClickListener notesClickListener = new NotesClickListener() {
         @Override
         public void onClick(Notes notes) {
-
+            Intent intent = new Intent(MainActivity.this, NotesTakerActivity.class);
+            intent.putExtra("old_notes", notes);
+            startActivityForResult(intent, 102);
         }
 
         @Override
