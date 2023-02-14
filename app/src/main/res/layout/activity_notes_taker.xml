@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".NotesTakerActivity">
 
-    <Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_notes"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -28,7 +28,7 @@
                 android:src="@drawable/ic_save" />
 
         </RelativeLayout>
-    </Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <EditText
         android:id="@+id/editText_title"
