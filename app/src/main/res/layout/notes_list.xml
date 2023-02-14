@@ -29,7 +29,7 @@
                 android:padding="8dp"
                 android:scrollHorizontally="true"
                 android:singleLine="true"
-                android:text="Title"
+                android:text="@string/title_of_note"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
