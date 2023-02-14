@@ -2,6 +2,8 @@ package com.saushkin.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -9,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.saushkin.myapplication.Models.Notes;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class NotesTakerActivity extends AppCompatActivity {
@@ -34,6 +39,17 @@ public class NotesTakerActivity extends AppCompatActivity {
                     Toast.makeText(NotesTakerActivity.this, "Please, enter description", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+                Date date = new Date();
+                notes = new Notes();
+
+                notes.setTitle(title);
+                notes.setNotes(description);
+                notes.setDate(formatter.format(date));
+                Intent intent = new Intent();
+                intent.putExtra("notes",notes);
+                setResult(Activity.RESULT_OK, intent);
+                finish();
             }
         });
 
