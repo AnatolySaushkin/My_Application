@@ -100,7 +100,6 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 notes.clear();
                 notes.addAll(database.mainDao().getAll());
                 notesListAdapter.notifyDataSetChanged();
-
             }
         }
     }
@@ -116,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         @Override
         public void onClick(Notes notes) {
             Intent intent = new Intent(MainActivity.this, NotesTakerActivity.class);
-            intent.putExtra("old_notes", notes);
+            intent.putExtra("old_note", notes);
             startActivityForResult(intent, 102);
         }
 
