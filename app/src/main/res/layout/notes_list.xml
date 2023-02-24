@@ -67,8 +67,7 @@
             android:text="date"
             android:textColor="@color/grey"
             android:textSize="14sp"
-            android:textStyle="normal"
-            />
+            android:textStyle="normal" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

@@ -6,7 +6,9 @@ import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
-@Entity(tableName = "notes")
+// таблица, в которой мы будет хранить наши данные.
+
+@Entity( tableName = "notes")
 public class Notes implements Serializable {
 
 
@@ -24,6 +26,8 @@ public class Notes implements Serializable {
 
     @ColumnInfo (name = "pinned")
     boolean pinned = false;
+
+    // для получения доступа к содержимому таблицы.
 
     public int getID() {
         return ID;

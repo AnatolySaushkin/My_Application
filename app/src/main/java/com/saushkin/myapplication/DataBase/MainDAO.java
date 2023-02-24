@@ -15,20 +15,28 @@ import java.util.List;
 @Dao
 public interface MainDAO {
 
-    @Insert (onConflict = REPLACE)
-    void insert (Notes notes);
+
+    //метод вставления данных в таблицу
+    @Insert(onConflict = REPLACE)
+    void insert(Notes notes);
+
+    // метод для получения данных из таблицы (с SQL-запросом)
 
     @Query("SELECT * FROM notes ORDER BY id DESC")
     List<Notes> getAll();
 
+
+    // метод для обновления данных в таблице при изменении
     @Query("UPDATE notes SET title = :title, notes = :notes WHERE ID = :id")
-    void update (int id, String title, String notes);
+    void update(int id, String title, String notes);
 
+
+    // удаление заметки
     @Delete
-    void delete (Notes notes);
+    void delete(Notes notes);
 
+    // закрепление заметки
     @Query("UPDATE notes SET pinned = :pin WHERE ID = :id")
-    void pin (int id, boolean pin);
-
+    void pin(int id, boolean pin);
 
 }

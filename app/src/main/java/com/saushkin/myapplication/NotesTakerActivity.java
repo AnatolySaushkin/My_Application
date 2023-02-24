@@ -32,6 +32,7 @@ public class NotesTakerActivity extends AppCompatActivity {
         editText_title = findViewById(R.id.editText_title);
         editText_notes = findViewById(R.id.editText_notes);
 
+
         notes = new Notes();
 
         try {
@@ -45,14 +46,14 @@ public class NotesTakerActivity extends AppCompatActivity {
 
         imageView_save.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 String title = editText_title.getText().toString();
                 String description = editText_notes.getText().toString();
                 if (description.isEmpty()) {
                     Toast.makeText(NotesTakerActivity.this, "Please, enter description", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                SimpleDateFormat formatter = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z");
+                SimpleDateFormat formatter = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss");
                 Date date = new Date();
                 notes = new Notes();
                 if (!isOldNote) {

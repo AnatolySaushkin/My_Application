@@ -25,7 +25,7 @@
                 android:layout_alignParentEnd="true"
                 android:background="@android:color/transparent"
                 android:padding="10dp"
-                android:src="@drawable/ic_save" />
+                android:src="@drawable/ic_save"/>
 
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>

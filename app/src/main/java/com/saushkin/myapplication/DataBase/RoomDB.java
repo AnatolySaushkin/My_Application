@@ -9,6 +9,8 @@ import androidx.room.RoomDatabase;
 
 import com.saushkin.myapplication.Models.Notes;
 
+//База данных для хранения заметок
+
 @Database(entities = Notes.class, version = 1, exportSchema = false)
 public abstract class RoomDB extends RoomDatabase {
 
@@ -26,5 +28,6 @@ public abstract class RoomDB extends RoomDatabase {
         }
         return database;
     }
+
 public abstract MainDAO mainDao();
 }
