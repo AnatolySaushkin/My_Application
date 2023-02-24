@@ -2,7 +2,7 @@ package com.saushkin.myapplication.ui.user;
 
 import androidx.cardview.widget.CardView;
 
-import com.saushkin.myapplication.domain.Models.Notes;
+import com.saushkin.myapplication.data.Models.Notes;
 
 public interface NotesClickListener {
 

@@ -8,7 +8,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.saushkin.myapplication.domain.Models.Notes;
+import com.saushkin.myapplication.data.Models.Notes;
 
 import java.util.List;
 

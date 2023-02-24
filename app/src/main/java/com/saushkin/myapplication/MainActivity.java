@@ -19,7 +19,7 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.saushkin.myapplication.domain.NotesListAdapter;
 import com.saushkin.myapplication.data.RoomDB;
-import com.saushkin.myapplication.domain.Models.Notes;
+import com.saushkin.myapplication.data.Models.Notes;
 import com.saushkin.myapplication.ui.user.NotesClickListener;
 import com.saushkin.myapplication.ui.NotesTakerActivity;
 

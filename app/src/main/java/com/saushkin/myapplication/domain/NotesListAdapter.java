@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.saushkin.myapplication.domain.Models.Notes;
+import com.saushkin.myapplication.data.Models.Notes;
 import com.saushkin.myapplication.ui.user.NotesClickListener;
 import com.saushkin.myapplication.R;
 
