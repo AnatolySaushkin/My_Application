@@ -1,6 +1,5 @@
 package com.saushkin.myapplication;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
@@ -15,17 +14,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Switch;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.saushkin.myapplication.Adapter.NotesListAdapter;
-import com.saushkin.myapplication.DataBase.RoomDB;
-import com.saushkin.myapplication.Models.Notes;
+import com.saushkin.myapplication.domain.NotesListAdapter;
+import com.saushkin.myapplication.data.RoomDB;
+import com.saushkin.myapplication.data.Models.Notes;
+import com.saushkin.myapplication.ui.user.NotesClickListener;
+import com.saushkin.myapplication.ui.NotesTakerActivity;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
     RecyclerView recyclerView;

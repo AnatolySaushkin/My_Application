@@ -1,4 +1,4 @@
-package com.saushkin.myapplication.Adapter;
+package com.saushkin.myapplication.domain;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,8 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.saushkin.myapplication.Models.Notes;
-import com.saushkin.myapplication.NotesClickListener;
+import com.saushkin.myapplication.data.Models.Notes;
+import com.saushkin.myapplication.ui.user.NotesClickListener;
 import com.saushkin.myapplication.R;
 
 import java.util.ArrayList;

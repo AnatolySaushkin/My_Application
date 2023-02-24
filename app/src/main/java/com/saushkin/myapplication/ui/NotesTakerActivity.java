@@ -1,4 +1,4 @@
-package com.saushkin.myapplication;
+package com.saushkin.myapplication.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +10,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.saushkin.myapplication.Models.Notes;
+import com.saushkin.myapplication.data.Models.Notes;
+import com.saushkin.myapplication.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

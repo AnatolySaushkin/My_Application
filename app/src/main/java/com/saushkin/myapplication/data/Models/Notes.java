@@ -1,4 +1,4 @@
-package com.saushkin.myapplication.Models;
+package com.saushkin.myapplication.data.Models;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

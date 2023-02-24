@@ -1,4 +1,4 @@
-package com.saushkin.myapplication.DataBase;
+package com.saushkin.myapplication.data;
 
 
 import static androidx.room.OnConflictStrategy.REPLACE;
@@ -8,7 +8,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.saushkin.myapplication.Models.Notes;
+import com.saushkin.myapplication.data.Models.Notes;
 
 import java.util.List;
 
